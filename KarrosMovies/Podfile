@@ -1,0 +1,10 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'KarrosMovies' do
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'MBProgressHUD'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+end

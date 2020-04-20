@@ -3,17 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181935D1244AD81D00C1BB6D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D0244AD81D00C1BB6D /* APIManager.swift */; };
+		181935D2244AD81D00C1BB6D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D0244AD81D00C1BB6D /* APIManager.swift */; };
+		181935D4244AD95800C1BB6D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D3244AD95800C1BB6D /* BaseViewModel.swift */; };
+		181935D5244AD95800C1BB6D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D3244AD95800C1BB6D /* BaseViewModel.swift */; };
+		181935D7244AD9A700C1BB6D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D6244AD9A700C1BB6D /* BaseViewController.swift */; };
+		181935D8244AD9A700C1BB6D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935D6244AD9A700C1BB6D /* BaseViewController.swift */; };
+		181935DB244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935DA244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift */; };
+		181935DC244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935DA244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift */; };
+		181935DE244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */; };
+		181935DF244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */; };
+		181935E1244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */; };
+		181935E2244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */; };
+		181935E4244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */; };
+		181935E5244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */; };
+		181935E7244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */; };
+		181935E8244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */; };
+		181935EA244ADC1800C1BB6D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */; };
+		181935EB244ADC1800C1BB6D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */; };
+		181935ED244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935EC244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift */; };
+		181935EE244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935EC244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift */; };
+		181935F0244ADC5E00C1BB6D /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935EF244ADC5E00C1BB6D /* SectionTableViewCell.swift */; };
+		181935F1244ADC5E00C1BB6D /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935EF244ADC5E00C1BB6D /* SectionTableViewCell.swift */; };
+		18CA0EC1244C1BA3001D57CE /* MovieSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC0244C1BA3001D57CE /* MovieSectionType.swift */; };
+		18CA0EC2244C1BA3001D57CE /* MovieSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC0244C1BA3001D57CE /* MovieSectionType.swift */; };
+		18CA0EC4244C1C1F001D57CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */; };
+		18CA0EC5244C1C1F001D57CE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */; };
+		18CA0EC7244C1C98001D57CE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC6244C1C98001D57CE /* MovieModel.swift */; };
+		18CA0EC8244C1C98001D57CE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC6244C1C98001D57CE /* MovieModel.swift */; };
+		18CA0ECA244C1CE5001D57CE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC9244C1CE5001D57CE /* BaseModel.swift */; };
+		18CA0ECB244C1CE5001D57CE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC9244C1CE5001D57CE /* BaseModel.swift */; };
 		18FEDCC52449A43800CD2CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC42449A43800CD2CBC /* AppDelegate.swift */; };
 		18FEDCC72449A43800CD2CBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC62449A43800CD2CBC /* SceneDelegate.swift */; };
-		18FEDCC92449A43800CD2CBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC82449A43800CD2CBC /* ViewController.swift */; };
+		18FEDCC92449A43800CD2CBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC82449A43800CD2CBC /* HomeViewController.swift */; };
 		18FEDCCC2449A43800CD2CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEDCCA2449A43800CD2CBC /* Main.storyboard */; };
 		18FEDCCE2449A43B00CD2CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FEDCCD2449A43B00CD2CBC /* Assets.xcassets */; };
 		18FEDCD12449A43B00CD2CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FEDCCF2449A43B00CD2CBC /* LaunchScreen.storyboard */; };
 		18FEDCDC2449A43C00CD2CBC /* KarrosMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCDB2449A43C00CD2CBC /* KarrosMoviesTests.swift */; };
+		C49D5B3E24846710DAA31254 /* Pods_KarrosMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD12C011DDF495C212000C3B /* Pods_KarrosMovies.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +58,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181935D0244AD81D00C1BB6D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		181935D3244AD95800C1BB6D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		181935D6244AD9A700C1BB6D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		181935DA244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
+		181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandationsTableViewCell.swift; sourceTree = "<group>"; };
+		181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		181935EC244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandationCollectionViewCell.swift; sourceTree = "<group>"; };
+		181935EF244ADC5E00C1BB6D /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		18CA0EC0244C1BA3001D57CE /* MovieSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionType.swift; sourceTree = "<group>"; };
+		18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		18CA0EC6244C1C98001D57CE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		18CA0EC9244C1CE5001D57CE /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		18FEDCC12449A43800CD2CBC /* KarrosMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarrosMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEDCC42449A43800CD2CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FEDCC62449A43800CD2CBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18FEDCC82449A43800CD2CBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18FEDCC82449A43800CD2CBC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18FEDCCB2449A43800CD2CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FEDCCD2449A43B00CD2CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FEDCD02449A43B00CD2CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +84,9 @@
 		18FEDCD72449A43B00CD2CBC /* KarrosMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarrosMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEDCDB2449A43C00CD2CBC /* KarrosMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarrosMoviesTests.swift; sourceTree = "<group>"; };
 		18FEDCDD2449A43C00CD2CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F01E7BC1CFDBF9667145DA /* Pods-KarrosMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarrosMovies.release.xcconfig"; path = "Target Support Files/Pods-KarrosMovies/Pods-KarrosMovies.release.xcconfig"; sourceTree = "<group>"; };
+		B5D4C65ADAA81CCEC4232818 /* Pods-KarrosMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KarrosMovies.debug.xcconfig"; path = "Target Support Files/Pods-KarrosMovies/Pods-KarrosMovies.debug.xcconfig"; sourceTree = "<group>"; };
+		BD12C011DDF495C212000C3B /* Pods_KarrosMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KarrosMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49D5B3E24846710DAA31254 /* Pods_KarrosMovies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +108,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181935CB244AD55900C1BB6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18CA0EC9244C1CE5001D57CE /* BaseModel.swift */,
+				18CA0EC6244C1C98001D57CE /* MovieModel.swift */,
+				18CA0EC0244C1BA3001D57CE /* MovieSectionType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		181935CC244AD56500C1BB6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				181935D9244ADB4900C1BB6D /* Cells */,
+				181935CE244AD58F00C1BB6D /* Controllers */,
+				18FEDCCA2449A43800CD2CBC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		181935CD244AD56D00C1BB6D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				181935D3244AD95800C1BB6D /* BaseViewModel.swift */,
+				18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		181935CE244AD58F00C1BB6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18FEDCC82449A43800CD2CBC /* HomeViewController.swift */,
+				181935D6244AD9A700C1BB6D /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		181935CF244AD80300C1BB6D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				181935D0244AD81D00C1BB6D /* APIManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		181935D9244ADB4900C1BB6D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				181935DA244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift */,
+				181935EF244ADC5E00C1BB6D /* SectionTableViewCell.swift */,
+				181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */,
+				181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */,
+				181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */,
+				181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */,
+				181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */,
+				181935EC244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		18FEDCB82449A43800CD2CBC = {
 			isa = PBXGroup;
 			children = (
 				18FEDCC32449A43800CD2CBC /* KarrosMovies */,
 				18FEDCDA2449A43B00CD2CBC /* KarrosMoviesTests */,
 				18FEDCC22449A43800CD2CBC /* Products */,
+				20DF5B31A4D46E15C0533276 /* Pods */,
+				3E8BC2D312E8770CD2D3E74E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +192,12 @@
 		18FEDCC32449A43800CD2CBC /* KarrosMovies */ = {
 			isa = PBXGroup;
 			children = (
+				181935CF244AD80300C1BB6D /* Helper */,
+				181935CB244AD55900C1BB6D /* Models */,
+				181935CD244AD56D00C1BB6D /* ViewModels */,
+				181935CC244AD56500C1BB6D /* Views */,
 				18FEDCC42449A43800CD2CBC /* AppDelegate.swift */,
 				18FEDCC62449A43800CD2CBC /* SceneDelegate.swift */,
-				18FEDCC82449A43800CD2CBC /* ViewController.swift */,
-				18FEDCCA2449A43800CD2CBC /* Main.storyboard */,
 				18FEDCCD2449A43B00CD2CBC /* Assets.xcassets */,
 				18FEDCCF2449A43B00CD2CBC /* LaunchScreen.storyboard */,
 				18FEDCD22449A43B00CD2CBC /* Info.plist */,
@@ -99,6 +214,23 @@
 			path = KarrosMoviesTests;
 			sourceTree = "<group>";
 		};
+		20DF5B31A4D46E15C0533276 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4C65ADAA81CCEC4232818 /* Pods-KarrosMovies.debug.xcconfig */,
+				91F01E7BC1CFDBF9667145DA /* Pods-KarrosMovies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E8BC2D312E8770CD2D3E74E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD12C011DDF495C212000C3B /* Pods_KarrosMovies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18FEDCE02449A43C00CD2CBC /* Build configuration list for PBXNativeTarget "KarrosMovies" */;
 			buildPhases = (
+				93734D343EBBE50AE766CD67 /* [CP] Check Pods Manifest.lock */,
 				18FEDCBD2449A43800CD2CBC /* Sources */,
 				18FEDCBE2449A43800CD2CBC /* Frameworks */,
 				18FEDCBF2449A43800CD2CBC /* Resources */,
+				4310CC3D556972AF6A861768 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,14 +329,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4310CC3D556972AF6A861768 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KarrosMovies/Pods-KarrosMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KarrosMovies/Pods-KarrosMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KarrosMovies/Pods-KarrosMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93734D343EBBE50AE766CD67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KarrosMovies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18FEDCBD2449A43800CD2CBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FEDCC92449A43800CD2CBC /* ViewController.swift in Sources */,
+				18CA0ECA244C1CE5001D57CE /* BaseModel.swift in Sources */,
+				181935DB244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift in Sources */,
+				181935F0244ADC5E00C1BB6D /* SectionTableViewCell.swift in Sources */,
+				181935D1244AD81D00C1BB6D /* APIManager.swift in Sources */,
+				18CA0EC4244C1C1F001D57CE /* HomeViewModel.swift in Sources */,
+				181935E1244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */,
+				181935DE244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */,
+				181935EA244ADC1800C1BB6D /* CategoryCollectionViewCell.swift in Sources */,
+				18CA0EC1244C1BA3001D57CE /* MovieSectionType.swift in Sources */,
+				181935ED244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */,
+				18CA0EC7244C1C98001D57CE /* MovieModel.swift in Sources */,
+				181935E4244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */,
+				181935D4244AD95800C1BB6D /* BaseViewModel.swift in Sources */,
+				18FEDCC92449A43800CD2CBC /* HomeViewController.swift in Sources */,
 				18FEDCC52449A43800CD2CBC /* AppDelegate.swift in Sources */,
+				181935E7244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */,
 				18FEDCC72449A43800CD2CBC /* SceneDelegate.swift in Sources */,
+				181935D7244AD9A700C1BB6D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +401,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181935DF244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */,
+				181935D2244AD81D00C1BB6D /* APIManager.swift in Sources */,
+				181935E5244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */,
+				181935D8244AD9A700C1BB6D /* BaseViewController.swift in Sources */,
+				181935EE244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */,
 				18FEDCDC2449A43C00CD2CBC /* KarrosMoviesTests.swift in Sources */,
+				18CA0ECB244C1CE5001D57CE /* BaseModel.swift in Sources */,
+				18CA0EC2244C1BA3001D57CE /* MovieSectionType.swift in Sources */,
+				181935DC244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift in Sources */,
+				181935EB244ADC1800C1BB6D /* CategoryCollectionViewCell.swift in Sources */,
+				18CA0EC5244C1C1F001D57CE /* HomeViewModel.swift in Sources */,
+				181935E8244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */,
+				18CA0EC8244C1C98001D57CE /* MovieModel.swift in Sources */,
+				181935F1244ADC5E00C1BB6D /* SectionTableViewCell.swift in Sources */,
+				181935E2244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */,
+				181935D5244AD95800C1BB6D /* BaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +566,7 @@
 		};
 		18FEDCE12449A43C00CD2CBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5D4C65ADAA81CCEC4232818 /* Pods-KarrosMovies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +585,7 @@
 		};
 		18FEDCE22449A43C00CD2CBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91F01E7BC1CFDBF9667145DA /* Pods-KarrosMovies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
