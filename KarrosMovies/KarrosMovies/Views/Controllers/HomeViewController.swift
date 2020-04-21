@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController {
         
         self.setupUI()
         self.setupTableView()
+        self.setupRx()
     }
     
     func setupUI() {
@@ -47,6 +48,15 @@ class HomeViewController: BaseViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
+    func setupRx() {
+        self.bindingBaseRx(withViewModel: self.viewModel)
+        self.viewModel.isUpdated
+            .subscribe(onNext: { [weak self](updated) in
+                self?.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+    }
+    
     // MARK:- Action
     
     @objc func ontouchUser() {
@@ -59,7 +69,7 @@ class HomeViewController: BaseViewController {
     
     @objc func didReloadData() {
         self.refresh.endRefreshing()
-        
+        self.viewModel.reloadData()
     }
     
 }
@@ -104,6 +114,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             self.configureSectionHeader(cell: cell, type: type)
+        } else if let moviesCell = cell as? MoviesTableViewCell {
+            self.configureMoviesCell(cell: moviesCell, type: type)
         }
         
         return cell ?? UITableViewCell(style: .default, reuseIdentifier: "cemptyCell")
@@ -126,11 +138,38 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return identifier
     }
     
+    
     private func configureSectionHeader(cell: UITableViewCell?, type: MovieSectionType) {
         guard let header = cell as? SectionHeaderTableViewCell else {
             return
         }
         header.movieType = type
+    }
+    
+    private func configureMoviesCell(cell: MoviesTableViewCell, type: MovieSectionType) {
+        var subViewModel: MovieListViewModel?
+        switch type {
+        case .upcoming:
+            subViewModel = self.viewModel.upcoming
+            break
+            
+        case .topRated:
+            subViewModel = self.viewModel.toprated
+            break
+            
+        case .popular:
+            subViewModel = self.viewModel.popular
+            break
+            
+        default:
+            break
+        }
+        
+        
+        cell.movies = subViewModel?.movies ?? []
+        cell.handleLoadMore = {
+            subViewModel?.getMoreData()
+        }
     }
     
 }

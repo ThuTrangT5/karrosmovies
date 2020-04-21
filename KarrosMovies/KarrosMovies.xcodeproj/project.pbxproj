@@ -37,6 +37,8 @@
 		18CA0EC8244C1C98001D57CE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC6244C1C98001D57CE /* MovieModel.swift */; };
 		18CA0ECA244C1CE5001D57CE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC9244C1CE5001D57CE /* BaseModel.swift */; };
 		18CA0ECB244C1CE5001D57CE /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA0EC9244C1CE5001D57CE /* BaseModel.swift */; };
+		18FBB146244ED22000C5F64F /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FBB145244ED22000C5F64F /* MovieListViewModel.swift */; };
+		18FBB147244ED22000C5F64F /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FBB145244ED22000C5F64F /* MovieListViewModel.swift */; };
 		18FEDCC52449A43800CD2CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC42449A43800CD2CBC /* AppDelegate.swift */; };
 		18FEDCC72449A43800CD2CBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC62449A43800CD2CBC /* SceneDelegate.swift */; };
 		18FEDCC92449A43800CD2CBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEDCC82449A43800CD2CBC /* HomeViewController.swift */; };
@@ -73,6 +75,7 @@
 		18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		18CA0EC6244C1C98001D57CE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		18CA0EC9244C1CE5001D57CE /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		18FBB145244ED22000C5F64F /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		18FEDCC12449A43800CD2CBC /* KarrosMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarrosMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FEDCC42449A43800CD2CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FEDCC62449A43800CD2CBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 			children = (
 				181935D3244AD95800C1BB6D /* BaseViewModel.swift */,
 				18CA0EC3244C1C1F001D57CE /* HomeViewModel.swift */,
+				18FBB145244ED22000C5F64F /* MovieListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,8 +144,8 @@
 		181935CE244AD58F00C1BB6D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				18FEDCC82449A43800CD2CBC /* HomeViewController.swift */,
 				181935D6244AD9A700C1BB6D /* BaseViewController.swift */,
+				18FEDCC82449A43800CD2CBC /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -378,6 +382,7 @@
 			files = (
 				18CA0ECA244C1CE5001D57CE /* BaseModel.swift in Sources */,
 				181935DB244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift in Sources */,
+				18FBB146244ED22000C5F64F /* MovieListViewModel.swift in Sources */,
 				181935F0244ADC5E00C1BB6D /* SectionTableViewCell.swift in Sources */,
 				181935D1244AD81D00C1BB6D /* APIManager.swift in Sources */,
 				18CA0EC4244C1C1F001D57CE /* HomeViewModel.swift in Sources */,
@@ -402,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181935DF244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */,
+				18FBB147244ED22000C5F64F /* MovieListViewModel.swift in Sources */,
 				181935D2244AD81D00C1BB6D /* APIManager.swift in Sources */,
 				181935E5244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */,
 				181935D8244AD9A700C1BB6D /* BaseViewController.swift in Sources */,

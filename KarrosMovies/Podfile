@@ -7,4 +7,5 @@ target 'KarrosMovies' do
   pod 'MBProgressHUD'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher'
 end

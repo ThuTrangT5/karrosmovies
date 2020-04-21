@@ -9,6 +9,8 @@
 import UIKit
 
 class SectionTableViewCell: UITableViewCell {
+    
+    var collectionView: UICollectionView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
