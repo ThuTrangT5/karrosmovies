@@ -24,6 +24,12 @@ class HomeViewController: BaseViewController {
         self.setupRx()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func setupUI() {
         let logo = UIImage(named: "top_logo")
         let imageView = UIImageView(image:logo)
@@ -70,6 +76,18 @@ class HomeViewController: BaseViewController {
     @objc func didReloadData() {
         self.refresh.endRefreshing()
         self.viewModel.reloadData()
+    }
+    
+    func openDetailScreen(movieID: NSNumber) {
+        self.performSegue(withIdentifier: "segueDetail", sender: movieID)
+    }
+    
+    //MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? DetailViewController,
+            let movieID = sender as? NSNumber {
+            vc.movieID = movieID
+        }
     }
     
 }
@@ -165,10 +183,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             break
         }
         
-        
         cell.movies = subViewModel?.movies ?? []
         cell.handleLoadMore = {
             subViewModel?.getMoreData()
+        }
+        cell.handleDidSelectMovie = { [weak self](movieID) in
+            self?.openDetailScreen(movieID: movieID)
         }
     }
     

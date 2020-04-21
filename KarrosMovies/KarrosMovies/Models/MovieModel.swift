@@ -13,25 +13,42 @@ class MovieModel: BaseModel {
     var movieID: NSNumber?
     var title: String?
     var imageURL: URL?
+    var backdropURL: URL?
     var averageRated: Double = 0
     var overview: String?
-//    var casts: []
-    var videos: [String] = []
-//    var coments: []
-//    var myRated:
+    var hasVideo: Bool = false
+    var releaseDate: Date?
+    var releaseDateString: String?
     
     required init(json: JSON) {
         super.init()
         
         movieID = json["id"].number
         title = json["title"].string
-        if let poster = json["poster_path"].string {
-            let fullLink = APIManager.imageBaseURL + poster
+        
+        if let path = json["poster_path"].string, path.isEmpty == false {
+            let fullLink = APIManager.imageBaseURL + path
             imageURL = URL(string: fullLink)
+        }
+        if let path = json["backdrop_path"].string, path.isEmpty == false {
+            let fullLink = APIManager.imageBaseURL + path
+            backdropURL = URL(string: fullLink)
+        }
+        
+        if let text = json["release_date"].string, text.isEmpty == false {
+            let formater = DateFormatter()
+            formater.dateFormat = "yyyy-MM-dd"
+            self.releaseDate = formater.date(from: text)
+            
+            if let date = releaseDate {
+                formater.dateFormat = "MMMM dd"
+                self.releaseDateString = formater.string(from: date)
+            }
         }
         
         averageRated = json["vote_average"].doubleValue
         overview = json["overview"].string
+        hasVideo = json["video"].boolValue
     }
     
     required public init?(coder aDecoder: NSCoder) {

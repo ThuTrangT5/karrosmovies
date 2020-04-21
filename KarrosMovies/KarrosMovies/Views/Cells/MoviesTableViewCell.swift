@@ -19,7 +19,7 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
     }
     private var cellSize = CGSize(width: 150, height: 270)
     var handleLoadMore: (() -> Void)?
-    
+    var handleDidSelectMovie: ((NSNumber)->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -83,8 +83,10 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        
-        
+        if indexPath.row < self.movies.count,
+            let selectedMovieID = self.movies[indexPath.row].movieID {
+            self.handleDidSelectMovie?(selectedMovieID)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
