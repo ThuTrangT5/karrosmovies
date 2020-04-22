@@ -35,8 +35,6 @@
 		181935DF244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */; };
 		181935E1244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */; };
 		181935E2244ADBA700C1BB6D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */; };
-		181935E4244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */; };
-		181935E5244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */; };
 		181935E7244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */; };
 		181935E8244ADBCC00C1BB6D /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */; };
 		181935EA244ADC1800C1BB6D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */; };
@@ -104,7 +102,6 @@
 		181935DA244ADB8000C1BB6D /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
-		181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandationsTableViewCell.swift; sourceTree = "<group>"; };
 		181935E6244ADBCC00C1BB6D /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		181935E9244ADC1800C1BB6D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		181935EC244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -165,7 +162,6 @@
 				181935DD244ADB9500C1BB6D /* MoviesTableViewCell.swift */,
 				1812E6152450469A00076112 /* MoviesTableViewCell.xib */,
 				181935E0244ADBA700C1BB6D /* CategoriesTableViewCell.swift */,
-				181935E3244ADBB600C1BB6D /* RecomandationsTableViewCell.swift */,
 				18FBB14E244F032B00C5F64F /* MovieOverviewTableViewCell.swift */,
 				1812E6232450506400076112 /* YourRateTableViewCell.swift */,
 			);
@@ -481,7 +477,6 @@
 				181935ED244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */,
 				18CA0EC7244C1C98001D57CE /* MovieModel.swift in Sources */,
 				1812E60D245044F100076112 /* CommentModel.swift in Sources */,
-				181935E4244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */,
 				181935D4244AD95800C1BB6D /* BaseViewModel.swift in Sources */,
 				18FEDCC92449A43800CD2CBC /* HomeViewController.swift in Sources */,
 				1812E61F24504A4C00076112 /* BaseCollectionViewCell.swift in Sources */,
@@ -504,7 +499,6 @@
 				181935DF244ADB9500C1BB6D /* MoviesTableViewCell.swift in Sources */,
 				18FBB147244ED22000C5F64F /* MovieListViewModel.swift in Sources */,
 				181935D2244AD81D00C1BB6D /* APIManager.swift in Sources */,
-				181935E5244ADBB600C1BB6D /* RecomandationsTableViewCell.swift in Sources */,
 				181935D8244AD9A700C1BB6D /* BaseViewController.swift in Sources */,
 				1864261224501DD600B40781 /* DetailViewController+TableView.swift in Sources */,
 				181935EE244ADC4200C1BB6D /* RecomandationCollectionViewCell.swift in Sources */,

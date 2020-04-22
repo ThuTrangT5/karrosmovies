@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y5i-aW-6rK">
-                        <rect key="frame" x="10" y="5" width="240" height="128"/>
+                        <rect key="frame" x="10" y="5" width="300" height="160"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Zg-Zl-rXB">
                         <rect key="frame" x="10" y="5" width="300" height="160"/>
@@ -30,10 +30,10 @@
                 <constraints>
                     <constraint firstItem="9Zg-Zl-rXB" firstAttribute="top" secondItem="kFc-rf-3mg" secondAttribute="top" constant="5" id="Flg-gw-pdi"/>
                     <constraint firstAttribute="bottom" secondItem="9Zg-Zl-rXB" secondAttribute="bottom" constant="5" id="GXY-p8-O0A"/>
-                    <constraint firstItem="Y5i-aW-6rK" firstAttribute="width" secondItem="9Zg-Zl-rXB" secondAttribute="width" multiplier="0.8" id="Gee-fN-jsG"/>
+                    <constraint firstItem="Y5i-aW-6rK" firstAttribute="width" secondItem="9Zg-Zl-rXB" secondAttribute="width" id="Gee-fN-jsG"/>
                     <constraint firstItem="9Zg-Zl-rXB" firstAttribute="leading" secondItem="kFc-rf-3mg" secondAttribute="leading" constant="10" id="QLy-Si-LDP"/>
                     <constraint firstItem="Y5i-aW-6rK" firstAttribute="top" secondItem="9Zg-Zl-rXB" secondAttribute="top" id="hfC-xw-rFf"/>
-                    <constraint firstItem="Y5i-aW-6rK" firstAttribute="height" secondItem="9Zg-Zl-rXB" secondAttribute="height" multiplier="0.8" id="paK-Me-KRG"/>
+                    <constraint firstItem="Y5i-aW-6rK" firstAttribute="height" secondItem="9Zg-Zl-rXB" secondAttribute="height" id="paK-Me-KRG"/>
                     <constraint firstItem="Y5i-aW-6rK" firstAttribute="leading" secondItem="9Zg-Zl-rXB" secondAttribute="leading" id="rOn-f7-qMe"/>
                     <constraint firstAttribute="trailing" secondItem="9Zg-Zl-rXB" secondAttribute="trailing" constant="10" id="vbh-ws-NZs"/>
                 </constraints>

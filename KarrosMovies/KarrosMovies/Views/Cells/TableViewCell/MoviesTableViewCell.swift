@@ -12,12 +12,13 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var movieType: MovieListSectionType = .popular
     var movies: [MovieModel] = [] {
         didSet {
             self.collectionView.reloadData()
         }
     }
-//    var cellSize = CGSize(width: 150, height: 270)
+    //    var cellSize = CGSize(width: 150, height: 270)
     var handleLoadMore: (() -> Void)?
     var handleDidSelectMovie: ((NSNumber)->Void)?
     
@@ -36,11 +37,14 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
     
     
     func cellSize() -> CGSize {
+        if self.movieType == .recommendation {
+            return CGSize(width: 300, height: 160)
+        }
+        
         return CGSize(width: 150, height: 270)
     }
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-        //        self.collectionView.layoutIfNeeded()
         return cellSize()
     }
     
@@ -56,6 +60,7 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
         self.collectionView.isScrollEnabled = true
         
         MovieCollectionViewCell.registerCellToTableView(collectionView: self.collectionView)
+        RecomendationCollectionViewCell.registerCellToTableView(collectionView: self.collectionView)
         
         if let flow = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flow.minimumLineSpacing = 0
@@ -78,6 +83,11 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if self.movieType == .recommendation {
+            return self.recommendationCell(indexPath: indexPath)
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.cellIdentifier(), for: indexPath)
         
         if let movieCell = cell as? MovieCollectionViewCell {
@@ -100,5 +110,15 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
             //last cell
             self.handleLoadMore?()
         }
+    }
+    
+    private func recommendationCell(indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecomendationCollectionViewCell.cellIdentifier(), for: indexPath)
+        
+        if let movieCell = cell as? RecomendationCollectionViewCell {
+            movieCell.movie = self.movies[indexPath.row]
+        }
+        
+        return cell
     }
 }

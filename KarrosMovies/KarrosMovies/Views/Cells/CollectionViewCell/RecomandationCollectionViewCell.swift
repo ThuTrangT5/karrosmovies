@@ -36,5 +36,9 @@ class RecomendationCollectionViewCell: BaseCollectionViewCell {
         imageViewPlaceholder.layer.shadowRadius = 3
         imageViewPlaceholder.layer.masksToBounds = false
         imageViewPlaceholder.backgroundColor = UIColor.white
+        
+        imageViewBackdrop.layer.cornerRadius = 6
+        imageViewBackdrop.layer.masksToBounds = true
+        imageViewBackdrop.contentMode = .scaleAspectFill
     }
 }

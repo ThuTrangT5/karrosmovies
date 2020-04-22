@@ -25,7 +25,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         self.tableView.addSubview(refresh)
         
         SectionHeaderTableViewCell.registerCellToTableView(tableView: self.tableView)
-        RecommendationsTableViewCell.registerCellToTableView(tableView: self.tableView)
         MoviesTableViewCell.registerCellToTableView(tableView: self.tableView)
         
     }
@@ -53,15 +52,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             self.configureSectionHeader(cell: cell, type: type)
             
-//        } else if let recommendation = cell as? RecommendationsTableViewCell {
-//            recommendation.movies = self.viewModel.recommendation.movies
-//            recommendation.handleLoadMore = {
-//                self.viewModel.recommendation.getMoreData()
-//            }
-//            recommendation.handleDidSelectMovie = { [weak self](movieID) in
-//                self?.openDetailScreen(movieID: movieID)
-//            }
-            
         } else if let moviesCell = cell as? MoviesTableViewCell {
             self.configureMoviesCell(cell: moviesCell, type: type)
         }
@@ -72,9 +62,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     private func getCellIdentifier(type: MovieListSectionType) -> String {
         var identifier = "cell"
         switch type {
-        case .recommendation:
-            identifier = RecommendationsTableViewCell.cellIdentifier()
-            break
         case .category:
             identifier = "cellRecommend"
             break
@@ -117,7 +104,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             break
         }
         
+        cell.movieType = type
         cell.movies = subViewModel?.movies ?? []
+        
         cell.handleLoadMore = {
             subViewModel?.getMoreData()
         }

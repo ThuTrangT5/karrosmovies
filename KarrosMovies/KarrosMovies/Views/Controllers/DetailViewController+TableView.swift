@@ -32,6 +32,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         guard let movieID = self.movieID else {
             return
         }
+        
         self.viewModel.getData(movieID: movieID)
     }
     
@@ -103,6 +104,10 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else if let recommendation = cell as? MoviesTableViewCell {
             recommendation.movies = (try? self.viewModel.recommendations.value()) ?? []
+            recommendation.handleDidSelectMovie = { [weak self] (movieID) in
+                self?.movieID = movieID
+                self?.viewModel.movieID.onNext(movieID)
+            }
         }
         
     }
