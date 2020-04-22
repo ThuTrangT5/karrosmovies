@@ -14,6 +14,7 @@ class DetailViewController: BaseViewController {
     
     @IBOutlet weak var imageViewBackdrop: UIImageView!
     @IBOutlet weak var imageViewPoster: UIImageView!
+    @IBOutlet weak var buttonBack: UIButton!
     @IBOutlet weak var buttonPlay: UIButton!
     @IBOutlet weak var labelRate: UILabel!
     @IBOutlet weak var labelDate: UILabel!
@@ -38,6 +39,11 @@ class DetailViewController: BaseViewController {
     
     func setupUI() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        buttonBack.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
+        buttonBack.layer.shadowOffset = CGSize.zero
+        buttonBack.layer.shadowOpacity = 1
+        buttonBack.layer.shadowRadius = 3
         
         imageViewPoster.layer.cornerRadius = 6
         imageViewPoster.layer.masksToBounds = true
@@ -106,5 +112,21 @@ class DetailViewController: BaseViewController {
     }
     
     @IBAction func ontouchPlay(_ sender: Any) {
+    }
+}
+
+
+extension DetailViewController {
+    class func openDetail(movieID: NSNumber, fromContext context: UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            vc.movieID = movieID
+            
+            if let nav = context.navigationController {
+                nav.pushViewController(vc, animated: true)
+            } else {
+                context.present(vc, animated: true, completion: nil)
+            }
+        }
     }
 }

@@ -79,15 +79,6 @@ class HomeViewController: BaseViewController {
     }
     
     func openDetailScreen(movieID: NSNumber) {
-        self.performSegue(withIdentifier: "segueDetail", sender: movieID)
+        DetailViewController.openDetail(movieID: movieID, fromContext: self)
     }
-    
-    //MARK:- Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DetailViewController,
-            let movieID = sender as? NSNumber {
-            vc.movieID = movieID
-        }
-    }
-    
 }

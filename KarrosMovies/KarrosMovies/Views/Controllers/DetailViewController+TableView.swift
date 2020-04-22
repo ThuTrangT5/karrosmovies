@@ -105,8 +105,9 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         } else if let recommendation = cell as? MoviesTableViewCell {
             recommendation.movies = (try? self.viewModel.recommendations.value()) ?? []
             recommendation.handleDidSelectMovie = { [weak self] (movieID) in
-                self?.movieID = movieID
-                self?.viewModel.movieID.onNext(movieID)
+                if let context = self {
+                    DetailViewController.openDetail(movieID: movieID, fromContext: context)
+                }
             }
         }
         
