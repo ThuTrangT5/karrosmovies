@@ -77,6 +77,8 @@ class APIManager: NSObject {
         
         params["api_key"] = self.getAPIKey()
         
+        print("REQUEST: \(url)")
+        
         Alamofire.request(url, method: method, parameters: params, headers: headers)
             .responseJSON { (response) in
                 
@@ -104,8 +106,20 @@ class APIManager: NSObject {
         
     }
     
-    func getRecomandation() {
-        let url = "account/{account_id}/movie/recommendations"
+    func getRecommendations(page: Int, callback: (([MovieModel], Error?)->Void)?) {
+        let url = "movie/100/recommendations"
+        let param: Parameters = [
+            "page": page
+        ]
+        self.sendRequest(method: .get, urlString: url, parameters: param) { (response, error) in
+            if let error = error {
+                callback?([], error)
+            } else {
+                let result = response["results"]
+                let movies: [MovieModel] = MovieModel.getArray(json: result)
+                callback?(movies, nil)
+            }
+        }
     }
     
     func getCategory() {
@@ -175,6 +189,23 @@ class APIManager: NSObject {
             } else {
                 let movie = MovieModel(json: response)
                 callback?(movie, nil)
+            }
+        }
+    }
+    
+    func getMovieRecommendations(movieID: NSNumber, callback: (([MovieModel], Error?)->Void)?) {
+        // https://api.themoviedb.org/3/movie/537061/recommendations?api_key=07811948850d858ade0df4095e0b7a59&language=en-US&page=1
+        let url = "movie/\(movieID)/recommendations"
+        let param: Parameters = [
+            "page": 1 // just get 1 page result for recommendation movies
+        ]
+        self.sendRequest(method: .get, urlString: url, parameters: param) { (response, error) in
+            if let error = error {
+                callback?([], error)
+            } else {
+                let result = response["results"]
+                let movies: [MovieModel] = MovieModel.getArray(json: result)
+                callback?(movies, nil)
             }
         }
     }

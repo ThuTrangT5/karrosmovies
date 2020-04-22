@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MovieCollectionViewCell: UICollectionViewCell {
+class MovieCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var imageViewPoster: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imageViewPlaceholder: UIImageView!

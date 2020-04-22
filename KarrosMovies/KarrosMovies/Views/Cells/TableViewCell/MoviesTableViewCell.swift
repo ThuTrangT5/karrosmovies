@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource  {
+class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource  {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -17,7 +17,7 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
             self.collectionView.reloadData()
         }
     }
-    private var cellSize = CGSize(width: 150, height: 270)
+//    var cellSize = CGSize(width: 150, height: 270)
     var handleLoadMore: (() -> Void)?
     var handleDidSelectMovie: ((NSNumber)->Void)?
     
@@ -35,9 +35,13 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
     }
     
     
+    func cellSize() -> CGSize {
+        return CGSize(width: 150, height: 270)
+    }
+    
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
-//        self.collectionView.layoutIfNeeded()
-        return cellSize
+        //        self.collectionView.layoutIfNeeded()
+        return cellSize()
     }
     
     func setupCollectionView() {
@@ -50,6 +54,8 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.showsVerticalScrollIndicator = false
         self.collectionView.isScrollEnabled = true
+        
+        MovieCollectionViewCell.registerCellToTableView(collectionView: self.collectionView)
         
         if let flow = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flow.minimumLineSpacing = 0
@@ -68,11 +74,11 @@ class MoviesTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return cellSize
+        return cellSize()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMovie", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.cellIdentifier(), for: indexPath)
         
         if let movieCell = cell as? MovieCollectionViewCell {
             movieCell.movie = self.movies[indexPath.row]

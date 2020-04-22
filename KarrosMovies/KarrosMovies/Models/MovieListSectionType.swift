@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum MovieSectionType: String {
-    case recomandation = "Recomendations"
+enum MovieListSectionType: String {
+    case recommendation = "Recommendations"
     case category = "Category"
     case popular = "Popular"
     case topRated = "Top rated"

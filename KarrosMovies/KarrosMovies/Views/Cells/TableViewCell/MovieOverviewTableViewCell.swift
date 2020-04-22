@@ -9,7 +9,9 @@
 import UIKit
 
 class MovieOverviewTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelOverview: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,10 @@ class MovieOverviewTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func bindData(movie: MovieModel) {
+        self.labelTitle.text = movie.title?.uppercased()
+        self.labelOverview.text = movie.overview
+        
+    }
 }

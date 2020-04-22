@@ -12,13 +12,13 @@ import RxSwift
 
 class MovieListViewModel: BaseViewModel {
     
-    var type: MovieSectionType = .popular
+    var type: MovieListSectionType = .popular
     private var currentPage: Int = 1
     private var isLoadAll = false
     var movies: [MovieModel] = []
     
     
-    init(type: MovieSectionType) {
+    init(type: MovieListSectionType) {
         super.init()
         self.type = type
         self.reloadData()
@@ -65,6 +65,10 @@ class MovieListViewModel: BaseViewModel {
         }
         
         switch type {
+        case .recommendation:
+            APIManager.shared.getRecommendations(page: page, callback: handleResponseData)
+            break
+            
         case .popular:
             APIManager.shared.getPopular(page: page, callback: handleResponseData)
             break

@@ -10,7 +10,8 @@ import UIKit
 
 class HomeViewModel: BaseViewModel {
     
-    var sections:[MovieSectionType] = []
+    var sections:[MovieListSectionType] = []
+    let recommendation = MovieListViewModel(type: .recommendation)
     let popular = MovieListViewModel(type: .popular)
     let toprated = MovieListViewModel(type: .topRated)
     let upcoming = MovieListViewModel(type: .upcoming)
@@ -19,7 +20,7 @@ class HomeViewModel: BaseViewModel {
         super.init()
         
         self.sections = [
-            .recomandation,
+            .recommendation,
             .category,
             .popular,
             .topRated,
@@ -38,6 +39,10 @@ class HomeViewModel: BaseViewModel {
             .bind(to: self.isLoading)
             .disposed(by: disposeBag)
         
+        self.recommendation.isLoading
+            .bind(to: self.isLoading)
+            .disposed(by: disposeBag)
+        
         self.popular.isUpdated
             .bind(to: self.isUpdated)
             .disposed(by: disposeBag)
@@ -47,6 +52,10 @@ class HomeViewModel: BaseViewModel {
             .disposed(by: disposeBag)
         
         self.upcoming.isUpdated
+            .bind(to: self.isUpdated)
+            .disposed(by: disposeBag)
+        
+        self.recommendation.isUpdated
             .bind(to: self.isUpdated)
             .disposed(by: disposeBag)
     }

@@ -20,6 +20,10 @@ class MovieModel: BaseModel {
     var releaseDate: Date?
     var releaseDateString: String?
     
+    var genres: [GenreModel] = []
+    var comments: [CommentModel] = []
+    var videos: [String] = []
+    
     required init(json: JSON) {
         super.init()
         
@@ -49,6 +53,11 @@ class MovieModel: BaseModel {
         averageRated = json["vote_average"].doubleValue
         overview = json["overview"].string
         hasVideo = json["video"].boolValue
+        
+        let genresJson = json["genres"]
+        if genresJson.isEmpty == false {
+            genres = GenreModel.getArray(json: genresJson)
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
