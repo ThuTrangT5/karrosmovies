@@ -11,13 +11,17 @@ import SwiftyJSON
 class GenreModel: BaseModel {
     var genreID: NSNumber?
     var name: String?
-    
+    var imageURL: URL?
     
     required init(json: JSON) {
         super.init()
         
         genreID = json["id"].number
         name = json["name"].string
+        if let path = json["path"].string {
+            let fullLink = APIManager.imageBaseURL + path
+            imageURL = URL(string: fullLink)
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {

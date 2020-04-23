@@ -11,6 +11,8 @@ import UIKit
 class HomeViewModel: BaseViewModel {
     
     var sections:[MovieListSectionType] = []
+    var category: [GenreModel] = []
+    
     let recommendation = MovieListViewModel(type: .recommendation)
     let popular = MovieListViewModel(type: .popular)
     let toprated = MovieListViewModel(type: .topRated)
@@ -26,6 +28,8 @@ class HomeViewModel: BaseViewModel {
             .topRated,
             .upcoming
         ]
+        
+        self.getCategory()
         
         self.popular.isLoading
             .bind(to: self.isLoading)
@@ -68,8 +72,16 @@ class HomeViewModel: BaseViewModel {
         self.popular.reloadData()
         self.toprated.reloadData()
         self.upcoming.reloadData()
+        self.getCategory()
     }
     
-    //    func get
-    
+    func getCategory() {
+        self.isLoading.onNext(true)
+        APIManager.shared.getCategory { [weak self](results, error) in
+            self?.isLoading.onNext(false)
+            self?.error.onNext(error)
+            self?.category = results
+            self?.isUpdated.onNext(true)
+        }
+    }
 }

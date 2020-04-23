@@ -26,6 +26,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         SectionHeaderTableViewCell.registerCellToTableView(tableView: self.tableView)
         MoviesTableViewCell.registerCellToTableView(tableView: self.tableView)
+        CategoriesTableViewCell.registerCellToTableView(tableView: self.tableView)
         
     }
     
@@ -54,6 +55,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else if let moviesCell = cell as? MoviesTableViewCell {
             self.configureMoviesCell(cell: moviesCell, type: type)
+            
+        } else if let categoryCell = cell as? CategoriesTableViewCell {
+            categoryCell.categories = self.viewModel.category
         }
         
         return cell ?? UITableViewCell(style: .default, reuseIdentifier: "cemptyCell")
@@ -63,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         var identifier = "cell"
         switch type {
         case .category:
-            identifier = "cellRecommend"
+            identifier = CategoriesTableViewCell.cellIdentifier()
             break
         default:
             identifier = MoviesTableViewCell.cellIdentifier()
@@ -78,7 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let header = cell as? SectionHeaderTableViewCell else {
             return
         }
-        header.bindData(sectionName: type.rawValue)
+        header.bindData(sectionName: type.rawValue.uppercased())
     }
     
     private func configureMoviesCell(cell: MoviesTableViewCell, type: MovieListSectionType) {

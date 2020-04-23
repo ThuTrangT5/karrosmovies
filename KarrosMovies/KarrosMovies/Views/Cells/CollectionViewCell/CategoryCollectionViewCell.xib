@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="MlC-ra-8Oh" customClass="CategoryCollectionViewCell" customModule="KarrosMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="254"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="4YO-64-VUc">
+                <rect key="frame" x="0.0" y="0.0" width="278" height="254"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_category_background" translatesAutoresizingMaskIntoConstraints="NO" id="oFB-sh-yBP">
+                        <rect key="frame" x="10" y="5" width="140" height="210"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9s-nd-DTJ">
+                        <rect key="frame" x="10" y="5" width="140" height="210"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="210" id="DaA-El-5yv"/>
+                            <constraint firstAttribute="width" constant="140" id="aL2-9e-Zjh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Justice League" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEv-ew-1Ql">
+                        <rect key="frame" x="25" y="91" width="110.5" height="38.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O9s-nd-DTJ" firstAttribute="leading" secondItem="4YO-64-VUc" secondAttribute="leading" constant="10" id="7P9-Yh-K1f"/>
+                    <constraint firstItem="oFB-sh-yBP" firstAttribute="width" secondItem="O9s-nd-DTJ" secondAttribute="width" id="8l0-YO-Nfi"/>
+                    <constraint firstAttribute="bottom" secondItem="O9s-nd-DTJ" secondAttribute="bottom" constant="5" id="AMf-qU-f3M"/>
+                    <constraint firstItem="eEv-ew-1Ql" firstAttribute="centerX" secondItem="O9s-nd-DTJ" secondAttribute="centerX" id="F3X-9J-EuJ"/>
+                    <constraint firstItem="oFB-sh-yBP" firstAttribute="centerX" secondItem="O9s-nd-DTJ" secondAttribute="centerX" id="OT3-wB-WzL"/>
+                    <constraint firstItem="oFB-sh-yBP" firstAttribute="centerY" secondItem="O9s-nd-DTJ" secondAttribute="centerY" id="Se3-g9-a1Y"/>
+                    <constraint firstItem="eEv-ew-1Ql" firstAttribute="centerY" secondItem="O9s-nd-DTJ" secondAttribute="centerY" id="UME-VZ-vUh"/>
+                    <constraint firstAttribute="trailing" secondItem="O9s-nd-DTJ" secondAttribute="trailing" constant="10" id="WkB-Oi-hLn"/>
+                    <constraint firstItem="oFB-sh-yBP" firstAttribute="height" secondItem="O9s-nd-DTJ" secondAttribute="height" id="XRe-C5-jdN"/>
+                    <constraint firstItem="O9s-nd-DTJ" firstAttribute="top" secondItem="4YO-64-VUc" secondAttribute="top" constant="5" id="jtC-am-HUT"/>
+                    <constraint firstItem="eEv-ew-1Ql" firstAttribute="width" secondItem="O9s-nd-DTJ" secondAttribute="width" multiplier="0.789286" id="yhc-M8-CZC"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="278" height="254"/>
+            <connections>
+                <outlet property="imageViewPlaceholder" destination="oFB-sh-yBP" id="vGd-wn-hgg"/>
+                <outlet property="imageViewPoster" destination="O9s-nd-DTJ" id="sCy-vg-RD7"/>
+                <outlet property="labelTitle" destination="eEv-ew-1Ql" id="KdF-oR-BBj"/>
+            </connections>
+            <point key="canvasLocation" x="192.75362318840581" y="94.419642857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_category_background" width="140" height="76.5"/>
+    </resources>
+</document>

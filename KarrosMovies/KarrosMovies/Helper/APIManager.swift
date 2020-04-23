@@ -20,38 +20,13 @@ class APIManager: NSObject {
     //        private var sessionID: String = ""
     //
     private func getHeader(accessToken: String? = nil) -> HTTPHeaders {
-        //            var token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNzgxMTk0ODg1MGQ4NThhZGUwZGY0MDk1ZTBiN2E1OSIsInN1YiI6IjU5YWU1ZTY4OTI1MTQxMDc2NTA1M2M3MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TJ6Qo70J5MWNazNgXMlKADYGQuozr6ErYZlw_JqmWFU"
-        //
+        
         let headers: HTTPHeaders = [
-            //                "Authorization": "bearer \(token)",
             "Content-Type":"application/json;charset=utf-8"
         ]
         
         return headers
     }
-    //
-    //
-    //    func getRequestToken(callback: ((String?, Error?)->Void)?) {
-    //        let url = "authentication/token/new"
-    //
-    //        self.sendRequest(method: .get, urlString: url) { (response, error) in
-    //            if let token = response["request_token"].string,
-    //                token.isEmpty == false {
-    ////                self.sessionID = token
-    //            }
-    //        }
-    //    }
-    //
-    //    func getSessionID(requestToken: String, callback: ((String?, Error?)->Void)?) {
-    //        let url = "authentication/session/new"
-    //
-    //        self.sendRequest(method: .post, urlString: url) { (response, error) in
-    //            if let token = response["request_token"].string,
-    //                token.isEmpty == false {
-    //                self.sessionID = token
-    //            }
-    //        }
-    //    }
     
     private func getAPIKey() -> String {
         if self.apiKey.isEmpty == false {
@@ -102,8 +77,6 @@ class APIManager: NSObject {
                     callback?(JSON.null, nil)
                 }
         }
-        
-        
     }
     
     func getRecommendations(page: Int, callback: (([MovieModel], Error?)->Void)?) {
@@ -122,10 +95,18 @@ class APIManager: NSObject {
         }
     }
     
-    func getCategory() {
+    func getCategory(callback: (([GenreModel], Error?)->Void)?) {
         // sample: https://api.themoviedb.org/3/genre/movie/list?api_key=07811948850d858ade0df4095e0b7a59&language=en-US
-        let url = ""
-        
+        let url = "genre/movie/list"
+        self.sendRequest(method: .get, urlString: url) { (response, error) in
+            if let error = error {
+                callback?([], error)
+            } else {
+                let json = response["genres"]
+                let result: [GenreModel] = GenreModel.getArray(json: json)
+                callback?(result, nil)
+            }
+        }
     }
     
     func getPopular(page: Int, callback: (([MovieModel], Error?)->Void)?) {

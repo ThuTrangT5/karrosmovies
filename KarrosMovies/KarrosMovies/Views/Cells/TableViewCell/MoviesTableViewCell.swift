@@ -18,7 +18,7 @@ class MoviesTableViewCell: BaseTableViewCell, UICollectionViewDelegateFlowLayout
             self.collectionView.reloadData()
         }
     }
-    //    var cellSize = CGSize(width: 150, height: 270)
+    
     var handleLoadMore: (() -> Void)?
     var handleDidSelectMovie: ((NSNumber)->Void)?
     
