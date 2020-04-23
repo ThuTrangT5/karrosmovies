@@ -34,7 +34,6 @@ class DetailViewController: BaseViewController {
         self.setupUI()
         self.setupRx()
         self.viewModel.movieID.onNext(self.movieID)
-        
     }
     
     func setupUI() {
@@ -76,6 +75,8 @@ class DetailViewController: BaseViewController {
     }
     
     func setupRx() {
+        self.bindingBaseRx(withViewModel: self.viewModel)
+        
         self.viewModel.movieInfo
             .subscribe(onNext: { [weak self](model) in
                 if let movie = model {
